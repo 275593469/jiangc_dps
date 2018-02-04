@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><style>
+</style>
+
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<title>账号 - 注册</title>
+<!--开始布局-->
+<link th:href="@{/assets/layouts/layout/css/layout.min.css}" rel="stylesheet" type="text/css" />
+<link th:href="@{/assets/layouts/layout/css/themes/darkblue.min.css}" rel="stylesheet" type="text/css" id="style_color" />
+<link th:href="@{/assets/layouts/layout/css/custom.min.css}" rel="stylesheet" type="text/css" />
+<!--结束布局-->
+<!--开始插件-->
+<link th:href="@{/assets/global/css/components.min.css}" rel="stylesheet" id="style_components" type="text/css" />
+<link th:href="@{/assets/global/plugins/bootstrap/css/bootstrap.min.css}" rel="stylesheet" type="text/css" />
+<!--结束插件-->
+<!--开始消息提示框 -->
+<link th:href="@{/assets/msg/toastr/css/toastr.css}" rel="stylesheet" type="text/css"/>
+<!--结束消息提示框 -->
+<!-- 增加样式 -->
+<link rel="stylesheet" type="text/css" th:href="@{/css/user/index.css}"/>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="wrap">
+			<div class="layout">
+				<div class="mainbox">
+					<div class="lgnheader">
+						<div class="header_tit t_c">
+							<em class=""><img class="milogo" th:src="@{/images/register.png}"/></em>
+							<h4 class="header_tit_txt">
+									账号注册
+							</h4>
+							<div class="site_info"></div>
+						</div>
+					</div>
+					<div>
+						<div class="regbox" id="blockui_sample_1_portlet_body">
+							<div>
+								<div class="form-group">
+									<input class="form-control form-control-solid placeholder-no-fix" name="account" id="account" placeholder="邮箱" type="text" value=""/>
+								</div> 
+								<div class="err_tip" id="accountError" style="display:none;"><div class="dis_box"><em class="icon_error"></em><span></span></div></div>
+								<div class="form-group">
+									<input class="form-control form-control-solid placeholder-no-fix" name="nickName" id="nickName" placeholder="输入昵称" type="text"/>
+								</div> 
+								<div class="err_tip" id="nickNameError" style="display:none;"><div class="dis_box"><em class="icon_error"></em><span></span></div></div>
+								<div class="form-group">
+									<input class="form-control form-control-solid placeholder-no-fix" name="password" id="password" placeholder="输入密码" type="password"/>
+								</div> 
+								<div class="err_tip" id="passwordError" style="display:none;"><div class="dis_box"><em class="icon_error"></em><span></span></div></div>
+								<div class="form-group">
+									<input class="form-control form-control-solid placeholder-no-fix" name="confirm-password" id="confirm-password" placeholder="确认密码" type="password"/>
+								</div>
+								<div class="err_tip" id="confirm-passwordError" style="display:none;"><div class="dis_box"><em class="icon_error"></em><span></span></div></div>
+								<div class="inputbg inputcode dis_box">
+									<input class="form-control form-control-solid placeholder-no-fix code" id="captcha" name="captcha" type="text" autocomplete="off" placeholder="输入验证码"/>
+									<div class="verification-code" style="border-style: none;">
+										<input id="checkCode" name="checkCode" type="button" readonly="readonly" class="code" value=""/>
+									</div>
+								</div>
+								<div class="err_tip" id="captchaError" style="display:none;"><div class="dis_box"><em class="icon_error"></em><span></span></div></div>
+							</div>
+							<div class="btns_bg">
+								<input class="btn_orange" value="立即注册" id="toRegister" type="button"/>
+								<p class="msg">
+									点击“立即注册”，即表示您同意并愿意遵守DPS用户协议
+								</p>
+							</div>
+							<div class="n_links_area">
+								<a class="outer-link" th:href="login">登录</a>
+								<span>|</span>
+								<a class="outer-link" href="javascript:;" id="goToUpdatePassword">忘记密码？</a> 
+							</div>
+							
+							<!--  弹出框start -->
+							<a class="confirm" data-toggle="modal" href="#confirm"></a>
+							<div id="confirm" class="modal fade" tabindex="-1" data-backdrop="confirm" data-keyboard="false" >
+			                     <div class="modal-dialog">
+			                         <div class="modal-content">
+			                             <div class="modal-header">
+			                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+			                                 <h4 class="modal-title">提示信息</h4>
+			                             </div>
+			                             <div class="modal-body">
+			                                 <p class="centered">恭喜您注册成功！</p>
+			                             </div>
+			                             <div class="modal-footer">
+			                                 <button type="button" data-dismiss="modal" class="btn red toActive">现在去激活</button>
+			                             </div>
+			                         </div>
+			                     </div>
+			                 </div>
+			                 <!-- 弹出框end -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="n-footer">
+		<p class="nf-intro">
+			<span>DPS数据处理中心</span>
+		</p>
+	</div>
+	<!-- 插件开始 -->
+	<script th:src="@{/assets/global/plugins/jquery.min.js}" type="text/javascript"></script>
+    <script th:src="@{/assets/global/plugins/bootstrap/js/bootstrap.min.js}" type="text/javascript"></script>
+    <script th:src="@{/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js}" type="text/javascript"></script>
+    <script th:src="@{/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js}" type="text/javascript"></script>
+    <script th:src="@{/assets/global/plugins/jquery.blockui.min.js}" type="text/javascript"></script>
+    <script th:src="@{/assets/global/plugins/uniform/jquery.uniform.min.js}" type="text/javascript"></script>
+    <script th:src="@{/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js}" type="text/javascript"></script>
+	<!-- 插件结束 -->
+	<!-- BEGIN 全球 -->
+    <script th:src="@{/assets/global/scripts/app.min.js}" type="text/javascript"></script>
+    <!-- END 全球 -->
+	<!-- BEGIN 布局 -->
+    <script th:src="@{/assets/layouts/layout/scripts/layout.min.js}" type="text/javascript"></script>
+    <script th:src="@{/assets/layouts/layout/scripts/demo.min.js}" type="text/javascript"></script>
+    <script th:src="@{/assets/layouts/global/scripts/quick-sidebar.min.js}" type="text/javascript"></script>
+    <!-- END 布局 -->
+	<!--开始消息提示框 -->
+	<script th:src="@{/assets/msg/mustache/mustache.js}" type="text/javascript"></script>
+	<script th:src="@{/assets/msg/toastr/js/toastr.js}" type="text/javascript"></script>
+	<script th:src="@{/assets/msg/Message.js}" type="text/javascript"></script>        
+	<!--结束消息提示框 -->
+	
+	<script th:src="@{/js/common/base.js}" type="text/javascript"></script>
+	<script th:src="@{/js/user/register.js}" type="text/javascript"></script>
+
+</body></html>

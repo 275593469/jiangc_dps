@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<configuration>  
+    <properties>  
+        <!-- 文件输出格式 -->  
+        <property name="PATTERN">%d{yyyy-MM-dd HH:mm:ss.SSS} |-%-5level [%thread] %c [%L] -| %msg%n</property>  
+    	<property name="LOG_HOME">../logs/BOOT_LOG</property> 
+        <property name="SERVER_NAME">boot_debug</property>
+    </properties>  
+  
+    <appenders> 
+    <RollingRandomAccessFile name="RollingFile" fileName="${LOG_HOME}/${SERVER_NAME}.log"  
+            filePattern="${LOG_HOME}/${SERVER_NAME}.%d{yyyy-MM-dd}.log">  
+			<PatternLayout pattern="${PATTERN}" />  
+            <Policies>
+<!--             	一个小时一个文件   %d{yyyy-MM-dd-HH} 和interval对应-->
+				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+<!-- 		        超过10k重生一个文件 -->
+		        <SizeBasedTriggeringPolicy size="2 MB"/>
+		     </Policies>
+        </RollingRandomAccessFile>  
+         
+        <Console name="Console" target="system_out">  
+            <PatternLayout pattern="${PATTERN}" />  
+        </Console>  
+    </appenders>  
+      
+    <loggers>  
+        <root level="info">  
+            <appenderref ref="Console" /> 
+            <appender-ref ref="RollingFile" /> 
+        </root>  
+    </loggers>  
+  
+</configuration>  

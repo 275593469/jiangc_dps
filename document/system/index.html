@@ -1,0 +1,397 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Dashboard - Bootstrap Admin Template</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link th:href="@{/assets/default/css/bootstrap.min.css}" rel="stylesheet" />
+<link th:href="@{/assets/default/css/bootstrap-responsive.min.css}" rel="stylesheet" />
+<link th:href="@{/assets/default/css/font-awesome.css}" rel="stylesheet" />
+<link th:href="@{/assets/default/css/style.css}" rel="stylesheet" />
+<link th:href="@{/assets/default/css/pages/dashboard.css}" rel="stylesheet" />
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<!-- /main -->
+<div class="main">
+  <div class="main-inner">
+    <div class="container">
+      <div class="row">
+        <div class="span6">
+          <div class="widget widget-nopad">
+            <div class="widget-header"> <i class="icon-list-alt"></i>
+              <h3><font><font> 今日统计</font></font></h3>
+            </div>
+            <!-- /widget-header -->
+            <div class="widget-content">
+              <div class="widget big-stats-container">
+                <div class="widget-content">
+                  <h6 class="bigstats"><font><font>一个完全响应的优质管理模板，建立在Twitter Bootstrap上。</font><font>这些是一些虚拟线条来填补该区域。</font></font></h6>
+                  <div id="big_stats" class="cf">
+                    <div class="stat"> <i class="icon-anchor"></i> <span class="value"><font><font>851</font></font></span> </div>
+                    <!-- .stat -->
+                    
+                    <div class="stat"> <i class="icon-thumbs-up-alt"></i> <span class="value"><font><font>423</font></font></span> </div>
+                    <!-- .stat -->
+                    
+                    <div class="stat"> <i class="icon-twitter-sign"></i> <span class="value"><font><font>922</font></font></span> </div>
+                    <!-- .stat -->
+                    
+                    <div class="stat"> <i class="icon-bullhorn"></i> <span class="value"><font><font>25％</font></font></span> </div>
+                    <!-- .stat --> 
+                  </div>
+                </div>
+                <!-- /widget-content --> 
+                
+              </div>
+            </div>
+          </div>
+          <!-- /widget -->
+          <div class="widget widget-nopad">
+            <div class="widget-header"> <i class="icon-list-alt"></i>
+              <h3><font><font> 最近的新闻</font></font></h3>
+            </div>
+            <!-- /widget-header -->
+            <div class="widget-content">
+              <div id="calendar">
+              </div>
+            </div>
+            <!-- /widget-content --> 
+          </div>
+          <!-- /widget -->
+          <div class="widget">
+            <div class="widget-header"> <i class="icon-file"></i>
+              <h3><font><font> 内容</font></font></h3>
+            </div>
+            <!-- /widget-header -->
+            <div class="widget-content">
+              <ul class="messages_layout">
+                <li class="from_user left"> <a href="#" class="avatar"><img th:src="@{/assets/default/img/message_avatar1.png}" /></a>
+                  <div class="message_wrap"> <span class="arrow"></span>
+                    <div class="info"> <a class="name"><font></font></a> <font><span class="time"><font>1小时前</font></span><a class="name"><font>约翰·史密斯</font></a></font><span class="time"><font></font></span>
+                      <div class="options_arrow">
+                        <div class="dropdown pull-right"> <a class="dropdown-toggle " id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="#"> <i class=" icon-caret-down"></i> </a>
+                          <ul class="dropdown-menu " role="menu" aria-labelledby="dLabel">
+                            <li><a href="#"><i class=" icon-share-alt icon-large"></i> Reply</a></li>
+                            <li><a href="#"><i class=" icon-trash icon-large"></i> Delete</a></li>
+                            <li><a href="#"><i class=" icon-share icon-large"></i> Share</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="text"><font><font>作为一个有趣的附注，作为一个没有身体的头，我羡慕死者。</font><font>有一种方法，只有一种方法来确定动物是否智能。</font><font>解剖大脑！</font><font>男人，我全身疼痛。</font><font>我觉得我刚刚和强大的雷神进行了十回合。</font></font></div>
+                  </div>
+                </li>
+                <li class="by_myself right"> <a href="#" class="avatar"><img th:src="@{/assets/default/img/message_avatar2.png}" /></a>
+                  <div class="message_wrap"> <span class="arrow"></span>
+                    <div class="info"> <a class="name"><font><font>Bender（我）</font></font></a> <span class="time"><font><font>4小时前</font></font></span>
+                      <div class="options_arrow">
+                        <div class="dropdown pull-right"> <a class="dropdown-toggle " id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="#"> <i class=" icon-caret-down"></i> </a>
+                          <ul class="dropdown-menu " role="menu" aria-labelledby="dLabel">
+                            <li><a href="#"><i class=" icon-share-alt icon-large"></i> Reply</a></li>
+                            <li><a href="#"><i class=" icon-trash icon-large"></i> Delete</a></li>
+                            <li><a href="#"><i class=" icon-share icon-large"></i> Share</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="text"><font><font>我想要的是成为一个适度智慧的猴子，穿着西装，这就是为什么我要转移到商学院！</font><font>我有更多，但你继续前进。</font><font>男人，我全身疼痛。</font><font>我觉得我刚刚和强大的雷神进行了十回合。</font><font>文件未找到。</font></font></div>
+                  </div>
+                </li>
+                <li class="from_user left"> <a href="#" class="avatar"><img th:src="@{img/message_avatar1.png}" /></a>
+                  <div class="message_wrap"> <span class="arrow"></span>
+                    <div class="info"> <a class="name"><font><font>Celeste Holm </font></font></a> <span class="time"><font><font>1天前</font></font></span>
+                      <div class="options_arrow">
+                        <div class="dropdown pull-right"> <a class="dropdown-toggle " id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="#"> <i class=" icon-caret-down"></i> </a>
+                          <ul class="dropdown-menu " role="menu" aria-labelledby="dLabel">
+                            <li><a href="#"><i class=" icon-share-alt icon-large"></i> Reply</a></li>
+                            <li><a href="#"><i class=" icon-trash icon-large"></i> Delete</a></li>
+                            <li><a href="#"><i class=" icon-share icon-large"></i> Share</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="text"><font><font>我会再做一次 </font><font>也许第三次！</font><font>但是就是这样。</font><font>你疯了吗？</font><font>我不能吞咽。</font><font>我是他的朋友耶稣。</font><font>不，我是圣诞老人！</font><font>从现在开始，你们都被命名为Bender Jr.</font></font></div>
+                  </div>
+                </li>
+                <li class="from_user left"> <a href="#" class="avatar"><img th:src="@{/assets/default/img/message_avatar2.png}" /></a>
+                  <div class="message_wrap"> <span class="arrow"></span>
+                    <div class="info"> <a class="name"><font><font>Mark Jobs </font></font></a> <span class="time"><font><font>2天前</font></font></span>
+                      <div class="options_arrow">
+                        <div class="dropdown pull-right"> <a class="dropdown-toggle " id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="#"> <i class=" icon-caret-down"></i> </a>
+                          <ul class="dropdown-menu " role="menu" aria-labelledby="dLabel">
+                            <li><a href="#"><i class=" icon-share-alt icon-large"></i> Reply</a></li>
+                            <li><a href="#"><i class=" icon-trash icon-large"></i> Delete</a></li>
+                            <li><a href="#"><i class=" icon-share icon-large"></i> Share</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="text"><font><font>这是关于成为奴隶的唯一的事情。</font><font>现在，现在 </font><font>完全对称的暴力从未解决过任何事情。</font><font>呃，小狗是以机械方式吗？</font><font>作为一个有趣的附注，作为一个没有身体的头，我羡慕死者。</font></font></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- /widget-content --> 
+          </div>
+          <!-- /widget --> 
+        </div>
+        <!-- /span6 -->
+        <div class="span6">
+          <div class="widget">
+            <div class="widget-header"> <i class="icon-bookmark"></i>
+              <h3><font><font>重要快捷方式</font></font></h3>
+            </div>
+            <!-- /widget-header -->
+            <div class="widget-content">
+              <div class="shortcuts"> <a href="javascript:;" class="shortcut"><i class="shortcut-icon icon-list-alt"></i><span class="shortcut-label"><font><font>应用</font></font></span> </a><a href="javascript:;" class="shortcut"><i class="shortcut-icon icon-bookmark"></i><span class="shortcut-label"><font><font>书签</font></font></span> </a><a href="javascript:;" class="shortcut"><i class="shortcut-icon icon-signal"></i> <span class="shortcut-label"><font><font>报告</font></font></span> </a><a href="javascript:;" class="shortcut"> <i class="shortcut-icon icon-comment"></i><span class="shortcut-label"><font><font>注释</font></font></span> </a><a href="javascript:;" class="shortcut"><i class="shortcut-icon icon-user"></i><span class="shortcut-label"><font><font>用户</font></font></span> </a><a href="javascript:;" class="shortcut"><i class="shortcut-icon icon-file"></i><span class="shortcut-label"><font><font>笔记</font></font></span> </a><a href="javascript:;" class="shortcut"><i class="shortcut-icon icon-picture"></i> <span class="shortcut-label"><font><font>相片</font></font></span> </a><a href="javascript:;" class="shortcut"> <i class="shortcut-icon icon-tag"></i><span class="shortcut-label"><font><font>标签</font></font></span> </a> </div>
+              <!-- /shortcuts --> 
+            </div>
+            <!-- /widget-content --> 
+          </div>
+          <!-- /widget -->
+          <div class="widget">
+            <div class="widget-header"> <i class="icon-signal"></i>
+              <h3><font><font> 区域图示例</font></font></h3>
+            </div>
+            <!-- /widget-header -->
+            <div class="widget-content">
+              <canvas id="area-chart" class="chart-holder" height="250" width="538" style="width: 538px; height: 250px;"> </canvas>
+              <!-- /area-chart --> 
+            </div>
+            <!-- /widget-content --> 
+          </div>
+          <!-- /widget -->
+          <div class="widget widget-table action-table">
+            <div class="widget-header"> <i class="icon-th-list"></i>
+              <h3><font><font>表示例</font></font></h3>
+            </div>
+            <!-- /widget-header -->
+            <div class="widget-content">
+              <table class="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                    <th><font><font> 免费资源 </font></font></th>
+                    <th><font><font> 下载</font></font></th>
+                    <th class="td-actions"> </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><font><font> 新鲜的Web开发资源 </font></font></td>
+                    <td><font><font> http://www.cssmoban.com/ </font></font></td>
+                    <td class="td-actions"><a href="javascript:;" class="btn btn-small btn-success"><i class="btn-icon-only icon-ok"> </i></a><a href="javascript:;" class="btn btn-danger btn-small"><i class="btn-icon-only icon-remove"> </i></a></td>
+                  </tr>
+                  <tr>
+                    <td><font><font> 新鲜的Web开发资源 </font></font></td>
+                    <td><font><font> http://www.cssmoban.com/ </font></font></td>
+                    <td class="td-actions"><a href="javascript:;" class="btn btn-small btn-success"><i class="btn-icon-only icon-ok"> </i></a><a href="javascript:;" class="btn btn-danger btn-small"><i class="btn-icon-only icon-remove"> </i></a></td>
+                  </tr>
+                  <tr>
+                    <td><font><font> 新鲜的Web开发资源 </font></font></td>
+                    <td><font><font> http://www.cssmoban.com/ </font></font></td>
+                    <td class="td-actions"><a href="javascript:;" class="btn btn-small btn-success"><i class="btn-icon-only icon-ok"> </i></a><a href="javascript:;" class="btn btn-danger btn-small"><i class="btn-icon-only icon-remove"> </i></a></td>
+                  </tr>
+                  <tr>
+                    <td><font><font> 新鲜的Web开发资源 </font></font></td>
+                    <td><font><font> http://www.cssmoban.com/ </font></font></td>
+                    <td class="td-actions"><a href="javascript:;" class="btn btn-small btn-success"><i class="btn-icon-only icon-ok"> </i></a><a href="javascript:;" class="btn btn-danger btn-small"><i class="btn-icon-only icon-remove"> </i></a></td>
+                  </tr>
+                  <tr>
+                    <td><font><font> 新鲜的Web开发资源 </font></font></td>
+                    <td><font><font> http://www.cssmoban.com/ </font></font></td>
+                    <td class="td-actions"><a href="javascript:;" class="btn btn-small btn-success"><i class="btn-icon-only icon-ok"> </i></a><a href="javascript:;" class="btn btn-danger btn-small"><i class="btn-icon-only icon-remove"> </i></a></td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            </div>
+            <!-- /widget-content --> 
+          </div>
+          <!-- /widget --> 
+          <div class="widget widget-nopad">
+            <div class="widget-header"> <i class="icon-list-alt"></i>
+              <h3><font><font> 最近的新闻</font></font></h3>
+            </div>
+            <!-- /widget-header -->
+            <div class="widget-content">
+              <ul class="news-items">
+                <li>
+                  
+                  <div class="news-item-date"> <span class="news-item-day"><font></font></span> <font><span class="news-item-month"><font>8月</font></span><span class="news-item-day"><font>29 </font></span></font><span class="news-item-month"><font><font>日</font></font></span> </div>
+                  <div class="news-item-detail"> <a href="http://www.cssmoban.com/thursday-roundup-40/" class="news-item-title" target="_blank"><font><font>星期四综合＃40</font></font></a>
+                    <p class="news-item-preview"><font><font> 这是我们的网页设计和开发新闻系列，我们分享我们最喜欢的设计/开发相关文章，资源，教程和真棒赠品。 </font></font></p>
+                  </div>
+                  
+                </li>
+                <li>
+                  
+                  <div class="news-item-date"> <span class="news-item-day"><font></font></span> <font><span class="news-item-month"><font>六月</font></span><span class="news-item-day"><font>十五</font></span></font><span class="news-item-month"><font><font>日</font></font></span> </div>
+                  <div class="news-item-detail"> <a href="http://www.cssmoban.com/retina-ready-responsive-app-landing-page-website-template-app-landing/" class="news-item-title" target="_blank"><font><font>视网膜准备响应应用程序登陆页面网站模板 - 应用程序着陆</font></font></a>
+                    <p class="news-item-preview"><font><font> 应用程序着陆是一个视网膜准备好的响应应用程序着陆页网站模板，完美的软件和应用程序开发人员和小企业主希望推广他们的iPhone，iPad，Android应用程序和软件产品。</font></font></p>
+                  </div>
+                  
+                </li>
+                <li>
+                  
+                  <div class="news-item-date"> <span class="news-item-day"><font></font></span> <font><span class="news-item-month"><font>10月</font></span><span class="news-item-day"><font>29 </font></span></font><span class="news-item-month"><font><font>日</font></font></span> </div>
+                  <div class="news-item-detail"> <a href="http://www.cssmoban.com/open-source-jquery-php-ajax-contact-form-templates-with-captcha-formify/" class="news-item-title" target="_blank"><font><font>开源jQuery PHP Ajax联系人表单模板与验证码：Formify</font></font></a>
+                    <p class="news-item-preview"> Formify is a contribution to lessen the pain of creating contact forms. The collection contains six different forms that are commonly used. These open source contact forms can be customized as well to suit the need for your website/application.</p>
+                  </div>
+                  
+                </li>
+              </ul>
+            </div>
+            <!-- /widget-content --> 
+          </div>
+          <!-- /widget -->
+        </div>
+        <!-- /span6 --> 
+      </div>
+      <!-- /row --> 
+    </div>
+    <!-- /container --> 
+  </div>
+  <!-- /main-inner --> 
+</div>
+<!-- /main -->
+
+
+<!--================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script th:src="@{/assets/default/js/jquery-1.7.2.min.js}"></script> 
+<script th:src="@{/assets/default/js/excanvas.min.js}"></script> 
+<script th:src="@{/assets/default/js/chart.min.js}" type="text/javascript"></script> 
+<script th:src="@{/assets/default/js/bootstrap.js}"></script>
+<script language="javascript" type="text/javascript" th:src="@{/assets/defaultjs/full-calendar/fullcalendar.min.js}"></script>
+ 
+<script th:src="@{/assets/default/js/base.js}"></script> 
+<script>     
+
+        var lineChartData = {
+            labels: ["January", "February", "March", "April", "May", "June", "July"],
+            datasets: [
+				{
+				    fillColor: "rgba(220,220,220,0.5)",
+				    strokeColor: "rgba(220,220,220,1)",
+				    pointColor: "rgba(220,220,220,1)",
+				    pointStrokeColor: "#fff",
+				    data: [65, 59, 90, 81, 56, 55, 40]
+				},
+				{
+				    fillColor: "rgba(151,187,205,0.5)",
+				    strokeColor: "rgba(151,187,205,1)",
+				    pointColor: "rgba(151,187,205,1)",
+				    pointStrokeColor: "#fff",
+				    data: [28, 48, 40, 19, 96, 27, 100]
+				}
+			]
+
+        }
+
+        var myLine = new Chart(document.getElementById("area-chart").getContext("2d")).Line(lineChartData);
+
+
+        var barChartData = {
+            labels: ["January", "February", "March", "April", "May", "June", "July"],
+            datasets: [
+				{
+				    fillColor: "rgba(220,220,220,0.5)",
+				    strokeColor: "rgba(220,220,220,1)",
+				    data: [65, 59, 90, 81, 56, 55, 40]
+				},
+				{
+				    fillColor: "rgba(151,187,205,0.5)",
+				    strokeColor: "rgba(151,187,205,1)",
+				    data: [28, 48, 40, 19, 96, 27, 100]
+				}
+			]
+
+        }    
+
+        $(document).ready(function() {
+        var date = new Date();
+        var d = date.getDate();
+        var m = date.getMonth();
+        var y = date.getFullYear();
+        var calendar = $('#calendar').fullCalendar({
+          header: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'month,agendaWeek,agendaDay'
+          },
+          selectable: true,
+          selectHelper: true,
+          select: function(start, end, allDay) {
+            var title = prompt('Event Title:');
+            if (title) {
+              calendar.fullCalendar('renderEvent',
+                {
+                  title: title,
+                  start: start,
+                  end: end,
+                  allDay: allDay
+                },
+                true // make the event "stick"
+              );
+            }
+            calendar.fullCalendar('unselect');
+          },
+          editable: true,
+          events: [
+            {
+              title: 'All Day Event',
+              start: new Date(y, m, 1)
+            },
+            {
+              title: 'Long Event',
+              start: new Date(y, m, d+5),
+              end: new Date(y, m, d+7)
+            },
+            {
+              id: 999,
+              title: 'Repeating Event',
+              start: new Date(y, m, d-3, 16, 0),
+              allDay: false
+            },
+            {
+              id: 999,
+              title: 'Repeating Event',
+              start: new Date(y, m, d+4, 16, 0),
+              allDay: false
+            },
+            {
+              title: 'Meeting',
+              start: new Date(y, m, d, 10, 30),
+              allDay: false
+            },
+            {
+              title: 'Lunch',
+              start: new Date(y, m, d, 12, 0),
+              end: new Date(y, m, d, 14, 0),
+              allDay: false
+            },
+            {
+              title: 'Birthday Party',
+              start: new Date(y, m, d+1, 19, 0),
+              end: new Date(y, m, d+1, 22, 30),
+              allDay: false
+            },
+            {
+              title: 'EGrappler.com',
+              start: new Date(y, m, 28),
+              end: new Date(y, m, 29),
+              url: 'http://EGrappler.com/'
+            }
+          ]
+        });
+      });
+    </script>
+</body>
+</html>

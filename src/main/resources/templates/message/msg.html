@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+  	<meta name="content-type" content="text/html; charset=UTF-8" />
+    <title>提示消息</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    
+	<!--开始布局-->
+	<link th:href="@{/assets/layouts/layout/css/layout.min.css}" rel="stylesheet" type="text/css" />
+	<link th:href="@{/assets/layouts/layout/css/themes/darkblue.min.css}" rel="stylesheet" type="text/css" id="style_color" />
+	<link th:href="@{/assets/layouts/layout/css/custom.min.css}" rel="stylesheet" type="text/css" />
+	<!--结束布局-->
+    <!--开始插件-->
+	<link th:href="@{/assets/global/css/components.min.css}" rel="stylesheet" id="style_components" type="text/css" />
+	<link th:href="@{/assets/global/plugins/bootstrap/css/bootstrap.min.css}" rel="stylesheet" type="text/css" />
+	<!--结束插件-->
+	<!-- 增加样式 -->
+	<link rel="stylesheet" type="text/css" th:href="@{/css/user/index.css}"/>
+  </head>
+  
+  <body>
+  	<div class="wrapper">
+		<div class="wrap">
+			<div class="layout">
+				<div class="mainbox">
+					<div class="lgnheader">
+					<div class="header_tit t_c">
+						<label class="btns_bg"><div th:text="${msg.message}"></div></label>
+						<div class="btns_bg">
+							<a class="btn red" th:href="@{/view/user/login}" th:text="返回登录页面"></a>
+						</div>
+		  			</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  </body>
+</html>

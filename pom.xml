@@ -1,0 +1,166 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>top.jiangc</groupId>
+  <artifactId>DPS</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <jdk.version>1.8</jdk.version>
+  </properties>
+
+  <parent>
+  	 	<groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-parent</artifactId>
+	    <version>1.4.1.RELEASE</version>
+  </parent>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/fluent-hc -->
+	<dependency>
+	    <groupId>org.apache.httpcomponents</groupId>
+	    <artifactId>fluent-hc</artifactId>
+	    <version>4.5.2</version>
+	    <scope>test</scope>
+	</dependency>
+	
+    <!-- 我们在 spring-boot-starter-web 里面排除了 spring-boot-starter-tomcat ，但是我们为了在本机测试方便，我们还要引入它，所以我们这样写： -->
+    <dependency>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-web</artifactId>
+	    <exclusions>
+        <exclusion>
+            <groupId>org.springframework.boot</groupId>
+	    	<artifactId>spring-boot-starter-logging</artifactId>
+        </exclusion>
+         <exclusion>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+        </exclusion>
+    </exclusions>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-tomcat</artifactId>
+	    <scope>provided</scope>
+	</dependency>
+	
+    <dependency>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-thymeleaf</artifactId>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-log4j2</artifactId>
+	</dependency>
+	<!-- 添加springboot自动重启开发工具 -->
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-devtools</artifactId>
+		<scope>provided</scope>
+	</dependency>
+	<!-- 引进JPA-->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+    <!-- mysql连接的jar包 -->
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+	<!-- druid -->
+	<dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>druid</artifactId>
+        <version>1.0.25</version>
+    </dependency>
+    <!-- 添加spring boot 测试依赖 -->
+	<dependency>
+        <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-test</artifactId>
+    </dependency>
+    <!-- activemq-->
+	<dependency>
+	    <groupId>org.apache.activemq</groupId>
+	    <artifactId>activemq-core</artifactId>
+	    <version>5.7.0</version>
+	</dependency>
+	<!-- MD5加密 -->
+	<dependency>
+	    <groupId>commons-codec</groupId>
+	    <artifactId>commons-codec</artifactId>
+	</dependency>
+	<!-- 发送邮件 -->
+	<dependency>
+	    <groupId>javax.mail</groupId>
+	    <artifactId>mail</artifactId>
+	    <version>1.4.7</version>
+	</dependency>
+	<dependency>
+	   	<groupId>org.apache.commons</groupId>
+	   	<artifactId>commons-email</artifactId>
+	   	<version>1.3.3</version>
+	</dependency>
+     
+    <!-- https://mvnrepository.com/artifact/commons-beanutils/commons-beanutils -->
+	<dependency>
+	    <groupId>commons-beanutils</groupId>
+	    <artifactId>commons-beanutils</artifactId>
+	</dependency>
+	
+	<!-- hadoop -->
+    <dependency>  
+        <groupId>org.apache.hadoop</groupId>  
+        <artifactId>hadoop-common</artifactId>  
+        <version>2.5.1</version>  
+    </dependency>  
+    <dependency>  
+        <groupId>org.apache.hadoop</groupId>  
+        <artifactId>hadoop-hdfs</artifactId>  
+        <version>2.5.1</version>  
+    </dependency>  
+    <dependency>  
+        <groupId>org.apache.hadoop</groupId>  
+        <artifactId>hadoop-client</artifactId>  
+        <version>2.5.1</version>  
+    </dependency>
+	
+  </dependencies>
+  
+  <build>  
+     <finalName>DPS</finalName>  
+     <plugins>
+    	 <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+                <source>${jdk.version}</source>
+                <target>${jdk.version}</target>
+            </configuration>
+         </plugin>
+         <plugin>  
+             <groupId>org.springframework.boot</groupId>
+             <artifactId>spring-boot-maven-plugin</artifactId>
+             <configuration>
+             	<fork>true</fork> <!--配置了会使用自己的类加载器 -->
+            	<!--
+                <source>${jdk.version}</source>
+            	<target>${jdk.version}</target>
+        	    -->
+        	 </configuration>
+         </plugin>  
+     </plugins>  
+  </build>  
+  
+</project>

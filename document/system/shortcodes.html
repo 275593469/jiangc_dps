@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en" class="translated-ltr"><head>
+    <meta charset="utf-8" />
+    <title>帐号 -  Bootstrap管理模板</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />    
+    
+    <link th:href="@{/assets/default/css/bootstrap.min.css}" rel="stylesheet" />
+    <link th:href="@{/assets/default/css/bootstrap-responsive.min.css}" rel="stylesheet" />
+    <link th:href="@{/assets/default/css/font-awesome.css}" rel="stylesheet" />
+    <link th:href="@{/assets/default/css/style.css}" rel="stylesheet" />
+   
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+  <link type="text/css" rel="stylesheet" charset="UTF-8" href="https://translate.googleapis.com/translate_static/css/translateelement.css" /></head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+	
+
+<div class="main">
+	<div class="main-inner">
+	    <div class="container">
+	      <div class="row">
+	      	<div class="span12">      		
+	      		<div class="widget ">
+	      			<div class="widget-header">
+	      				<i class="icon-user"></i>
+	      				<h3><font><font>你的帐户</font></font></h3>
+	  				</div> <!-- /widget-header -->
+					<div class="widget-content">
+						
+						<div class="tabbable">
+						<ul class="nav nav-tabs">
+						  <li>
+						    <a href="#formcontrols" data-toggle="tab"><font><font>表单控件</font></font></a>
+						  </li>
+						  <li class="active"><a href="#jscontrols" data-toggle="tab"><font><font>JS控件</font></font></a></li>
+						</ul>
+						
+						<br/>
+						
+							<div class="tab-content">
+								<div class="tab-pane" id="formcontrols">
+								<form id="edit-profile" class="form-horizontal">
+									<fieldset>
+										
+										<div class="control-group">											
+											<label class="control-label" for="username"><font><font>用户名</font></font></label>
+											<div class="controls">
+												<input type="text" class="span6 disabled" id="username" value="Example" disabled="" />
+												<p class="help-block"><font><font>您的用户名用于登录，无法更改。</font></font></p>
+											</div> <!-- /controls -->				
+										</div> <!-- /control-group -->
+										
+										
+										<div class="control-group">											
+											<label class="control-label" for="firstname"><font><font>名字</font></font></label>
+											<div class="controls">
+												<input type="text" class="span6" id="firstname" value="John" />
+											</div> <!-- /controls -->				
+										</div> <!-- /control-group -->
+										
+										
+										<div class="control-group">											
+											<label class="control-label" for="lastname"><font><font>姓</font></font></label>
+											<div class="controls">
+												<input type="text" class="span6" id="lastname" value="Donga" />
+											</div> <!-- /controls -->				
+										</div> <!-- /control-group -->
+										
+										
+										<div class="control-group">											
+											<label class="control-label" for="email"><font><font>电子邮件地址</font></font></label>
+											<div class="controls">
+												<input type="text" class="span4" id="email" value="john.donga@egrappler.com" />
+											</div> <!-- /controls -->				
+										</div> <!-- /control-group -->
+										
+										
+										<br/>
+										
+										<div class="control-group">											
+											<label class="control-label" for="password1"><font><font>密码</font></font></label>
+											<div class="controls">
+												<input type="password" class="span4" id="password1" value="thisispassword" />
+											</div> <!-- /controls -->				
+										</div> <!-- /control-group -->
+										
+										
+										<div class="control-group">											
+											<label class="control-label" for="password2"><font><font>确认</font></font></label>
+											<div class="controls">
+												<input type="password" class="span4" id="password2" value="thisispassword" />
+											</div> <!-- /controls -->				
+										</div> <!-- /control-group -->
+										
+                                        
+                                        
+                                        <div class="control-group">											
+											<label class="control-label"><font><font>复选框</font></font></label>
+											
+                                            
+                                            <div class="controls">
+                                            <label class="checkbox inline">
+                                              <input type="checkbox" /><font><font> 选项01
+                                            </font></font></label>
+                                            
+                                            <label class="checkbox inline">
+                                              <input type="checkbox" /><font><font> 选项02
+                                            </font></font></label>
+                                          </div>		<!-- /controls -->		
+										</div> <!-- /control-group -->
+                                        
+                                        
+                                        
+                                        <div class="control-group">											
+											<label class="control-label"><font><font>单选按钮</font></font></label>
+											
+                                            
+                                            <div class="controls">
+                                            <label class="radio inline">
+                                              <input type="radio" name="radiobtns" /><font><font> 选项01
+                                            </font></font></label>
+                                            
+                                            <label class="radio inline">
+                                              <input type="radio" name="radiobtns" /><font><font> 选项02
+                                            </font></font></label>
+                                          </div>	<!-- /controls -->			
+										</div> <!-- /control-group -->
+                                        
+                                        
+                                        
+                                        
+                                        <div class="control-group">											
+											<label class="control-label" for="radiobtns"><font><font>组合文本框</font></font></label>
+											
+                                            <div class="controls">
+                                               <div class="input-prepend input-append">
+                                                  <span class="add-on"><font><font>$</font></font></span>
+                                                  <input class="span2" id="appendedPrependedInput" type="text" />
+                                                  <span class="add-on"><font><font>.00</font></font></span>
+                                                </div>
+                                              </div>	<!-- /controls -->			
+										</div> <!-- /control-group -->
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <div class="control-group">											
+											<label class="control-label" for="radiobtns"><font><font>带按钮的文本框 </font></font></label>
+											
+                                            <div class="controls">
+                                               <div class="input-append">
+                                                  <input class="span2 m-wrap" id="appendedInputButton" type="text" />
+                                                  <button class="btn" type="button"><font><font>走！</font></font></button>
+                                                </div>
+                                              </div>	<!-- /controls -->			
+										</div> <!-- /control-group -->
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <div class="control-group">											
+											<label class="control-label" for="radiobtns"><font><font>按钮组中的下拉菜单</font></font></label>
+											
+                                            <div class="controls">
+                                              <div class="btn-group">
+                                              <a class="btn btn-primary" href="#"><i class="icon-user icon-white"></i><font><font> 用户</font></font></a>
+                                              <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+                                              <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="icon-pencil"></i><font><font> 编辑</font></font></a></li>
+                                                <li><a href="#"><i class="icon-trash"></i><font><font> 删除</font></font></a></li>
+                                                <li><a href="#"><i class="icon-ban-circle"></i><font><font> 禁止</font></font></a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#"><i class="i"></i><font><font> 做管理员</font></font></a></li>
+                                              </ul>
+                                            </div>
+                                              </div>	<!-- /controls -->			
+										</div> <!-- /control-group -->
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <div class="control-group">											
+											<label class="control-label" for="radiobtns"><font><font>按钮尺寸</font></font></label>
+											
+                                            <div class="controls">
+                                              <a class="btn btn-large" href="#"><i class="icon-star"></i><font><font> 星</font></font></a>
+                                                <a class="btn btn-small" href="#"><i class="icon-star"></i><font><font> 星</font></font></a>
+                                                <a class="btn btn-mini" href="#"><i class="icon-star"></i><font><font> 星</font></font></a>
+                                              </div>	<!-- /controls -->			
+										</div> <!-- /control-group -->
+                                        
+										
+											
+										 <br/>
+										
+											
+										<div class="form-actions">
+											<button type="submit" class="btn btn-primary"><font><font>保存</font></font></button> 
+											<button class="btn"><font><font>取消</font></font></button>
+										</div> <!-- /form-actions -->
+									</fieldset>
+								</form>
+								</div>
+								
+								<div class="tab-pane active" id="jscontrols">
+									<form id="edit-profile2" class="form-vertical">
+										<fieldset>
+											
+                                            
+                                            
+                                           
+                                                                                        
+											<div class="control-group">
+												<label class="control-label"><font><font>警报</font></font></label>
+												<div class="controls">
+													 <div class="alert">
+                                              <button type="button" class="close" data-dismiss="alert"><font><font>×</font></font></button>
+                                              <strong><font><font>警告！</font></font></strong><font><font>最好检查哟自己，你看起来不太好。
+                                            </font></font></div>
+                                            
+                                            
+                                                <div class="alert alert-success">
+                                                  <button type="button" class="close" data-dismiss="alert"><font><font>×</font></font></button>
+                                                  <strong><font><font>警告！</font></font></strong><font><font>最好检查哟自己，你看起来不太好。
+                                                </font></font></div>
+                                            
+                                                     
+                                                     <div class="alert alert-info">
+                                              <button type="button" class="close" data-dismiss="alert"><font><font>×</font></font></button>
+                                              <strong><font><font>警告！</font></font></strong><font><font>最好检查哟自己，你看起来不太好。
+                                            </font></font></div>
+                                            		 
+                                                     
+                                                     
+                                                     	
+                                            
+                                            
+                                            		 
+                                                     <div class="alert alert-block">
+                                                      <button type="button" class="close" data-dismiss="alert"><font><font>×</font></font></button>
+                                                      <h4><font><font>警告！</font></font></h4><font><font>
+                                                      最好检查哟自己，你不...
+                                                    </font></font></div>
+												</div> <!-- /controls -->	
+                                                
+                                                
+                                                
+                                                
+                                                
+											</div> <!-- /control-group -->
+                                            
+                                            
+                                            
+                                            
+                                            <div class="control-group">
+												<label class="control-label"><font><font>进度条</font></font></label>
+												<div class="controls">
+													 <div class="progress">
+                                                      <div class="bar" style="width: 60%;"></div>
+                                                    </div>
+                                                    
+                                                    
+                                                    <div class="progress progress-striped">
+                                                      <div class="bar" style="width: 20%;"></div>
+                                                    </div>
+                                                    
+                                                    
+                                                    <div class="progress progress-striped active">
+                                                      <div class="bar" style="width: 40%;"></div>
+                                                    </div>
+												</div> <!-- /controls -->	
+											</div> <!-- /control-group -->
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            <div class="control-group">
+												<label class="control-label"><font><font>手风琴</font></font></label>
+												<div class="controls">
+                                                
+													 <div class="accordion" id="accordion2">
+                                                      <div class="accordion-group">
+                                                        <div class="accordion-heading">
+                                                          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne"><font><font>
+                                                            可折叠组＃1
+                                                          </font></font></a>
+                                                        </div>
+                                                        <div id="collapseOne" class="accordion-body collapse in">
+                                                          <div class="accordion-inner"><font><font>
+                                                            一个长期以来的事实是，读者会在看到其布局时被页面的可读内容分散注意力。</font><font>使用Lorem Ipsum的观点是，它具有或多或少的正常字母分配，而不是使用“内容在这里，这里的内容”，使它看起来像可读的英语。</font><font>许多桌面出版包和网页编辑器现在使用Lorem Ipsum作为其默认模型文本，搜索“lorem ipsum”将会发现许多网站仍处于起步阶段。</font><font>多年来有不同版本的发展，有时是偶然的，有时是有目的的（注入幽默等）。
+
+
+                                                          </font></font></div>
+                                                        </div>
+                                                      </div>
+                                                      <div class="accordion-group">
+                                                        <div class="accordion-heading">
+                                                          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo"><font><font>
+                                                            可折叠组＃2
+                                                          </font></font></a>
+                                                        </div>
+                                                        <div id="collapseTwo" class="accordion-body collapse">
+                                                          <div class="accordion-inner"><font><font>
+                                                            动画pariatur陈词滥调
+                                                          </font></font></div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+												</div> <!-- /controls -->	
+											</div> <!-- /control-group -->
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            <div class="control-group">
+												<label class="control-label"><font><font>进度条</font></font></label>
+												<div class="controls">
+													 <!-- Button to trigger modal -->
+                                                    <a href="#myModal" role="button" class="btn" data-toggle="modal"><font><font>启动演示模态</font></font></a>
+                                                     
+                                                    <!-- Modal -->
+                                                    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                                      <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><font><font>×</font></font></button>
+                                                        <h3 id="myModalLabel"><font><font>感谢您访问EGrappler.com</font></font></h3>
+                                                      </div>
+                                                      <div class="modal-body">
+                                                        <p><font><font>一个很好的身体...</font></font></p>
+                                                      </div>
+                                                      <div class="modal-footer">
+                                                        <button class="btn" data-dismiss="modal" aria-hidden="true"><font><font>关</font></font></button>
+                                                        <button class="btn btn-primary"><font><font>保存更改</font></font></button>
+                                                      </div>
+                                                    </div>
+												</div> <!-- /controls -->	
+											</div> <!-- /control-group -->
+                                            
+                                         
+                                            
+                                             <div class="control-group">
+												<label class="control-label"><font><font>社会按钮</font></font></label>
+												<div class="controls">
+													 <button class="btn btn-facebook-alt"><i class="icon-facebook-sign"></i><font><font> Facebook</font></font></button>
+                                                    <button class="btn btn-twitter-alt"><i class="icon-twitter-sign"></i><font><font> 推特</font></font></button>
+                                                    <button class="btn btn-google-alt"><i class="icon-google-plus-sign"></i><font><font> Google+</font></font></button>
+                                                    <button class="btn btn-linkedin-alt"><i class="icon-linkedin-sign"></i><font><font> 链接在</font></font></button>
+                                                    <button class="btn btn-pinterest-alt"><i class="icon-pinterest-sign"></i><font><font> Pinterest</font></font></button>
+                                                    <button class="btn btn-github-alt"><i class="icon-github-sign"></i><font><font> Github</font></font></button>
+												</div> <!-- /controls -->	
+											</div> <!-- /control-group -->
+											
+											<br/>
+											
+											<div class="form-actions">
+												<button type="submit" class="btn btn-primary"><font><font>保存</font></font></button> <button class="btn"><font><font>取消</font></font></button>
+                                                <button class="btn btn-info"><font><font>信息</font></font></button>
+                                                <button class="btn btn-danger"><font><font>危险</font></font></button>
+                                                <button class="btn btn-warning"><font><font>警告</font></font></button>
+                                                <button class="btn btn-invert"><font><font>倒置</font></font></button>
+                                                <button class="btn btn-success"><font><font>成功</font></font></button>
+											</div>
+										</fieldset>
+									</form>
+								</div>
+								
+							</div>
+						  
+						  
+						</div>
+						
+						
+						
+						
+						
+					</div> <!-- /widget-content -->
+						
+				</div> <!-- /widget -->
+	      		
+		    </div> <!-- /span8 -->
+	      	
+	      	
+	      	
+	      	
+	      </div> <!-- /row -->
+	
+	    </div> <!-- /container -->
+	    
+	</div> <!-- /main-inner -->
+    
+</div> <!-- /main -->
+</div>
+    
+<script th:src="@{/assets/default/js/jquery-1.7.2.min.js}"></script>
+<script th:src="@{/assets/default/js/bootstrap.js}"></script>
+<script th:src="@{/assets/default/js/base.js}"></script>
+
+</body>
+</html>

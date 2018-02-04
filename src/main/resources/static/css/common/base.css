@@ -1,0 +1,10 @@
+
+.max-l-3{
+	max-height: 300px;
+	overflow: auto;
+}
+
+.box{
+	width:400px;height:200px;background-color:white;border: 1px solid #dddddd;border-radius: 4px;
+	overflow:auto;
+}

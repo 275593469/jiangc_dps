@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+<meta charset="utf-8" />
+<title>主页</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link th:href="@{/assets/default/css/bootstrap.min.css}" rel="stylesheet" />
+<link th:href="@{/assets/default/css/bootstrap-responsive.min.css}" rel="stylesheet" />
+<link th:href="@{/assets/default/css/font-awesome.css}" rel="stylesheet" />
+<link th:href="@{/assets/default/css/style.css}" rel="stylesheet" />
+<link th:href="@{/assets/default/css/pages/dashboard.css}" rel="stylesheet" />
+<link th:href="@{/css/common/base.css}" rel="stylesheet" />
+<!--开始消息提示框 -->
+<link th:href="@{/assets/msg/toastr/css/toastr.css}" rel="stylesheet" type="text/css"/>
+<!--结束消息提示框 -->
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<!-- /main -->
+<div class="main">
+  <div class="main-inner">
+    <div class="container">
+      <div class="row">
+        <div class="span6">
+          <div class="widget widget-nopad">
+            <div class="widget-header"> <i class="icon-list-alt"></i>
+              <h3><font><font> 日志显示</font></font></h3>
+            </div>
+            <!-- /widget-header -->
+            <div class="widget-content max-l-3">
+              <div class="widget big-stats-container">
+                <div class="widget-content">
+                  <div id="big_stats" class="cf">
+                 <!--    <div class="alert alert-info">
+                        <button type="button" class="close" data-dismiss="alert"><font><font>×</font></font></button>
+                        <strong><font><font>警告！</font></font></strong><font><font>最好检查哟自己，你看起来不太好。
+                        </font></font>
+                    </div> -->
+                  </div>
+                </div>
+                <!-- /widget-content --> 
+                
+              </div>
+            </div>
+          </div>
+          <!-- /widget -->
+          <div class="widget widget-nopad">
+            <div class="widget-header"> <i class="icon-list-alt"></i>
+              <h3><font><font> 最近的新闻</font></font></h3>
+            </div>
+            <!-- /widget-header -->
+            <div class="widget-content">
+              <div id="calendar">
+              </div>
+            </div>
+            <!-- /widget-content --> 
+          </div>
+          <!-- /widget -->
+          <div class="widget">
+            <div class="widget-header"> <i class="icon-file"></i>
+              <h3><font><font> 内容</font></font></h3>
+            </div>
+            <!-- /widget-header -->
+            <div class="widget-content">
+              <ul class="messages_layout">
+                <li class="from_user left"> <a href="#" class="avatar"><img th:src="@{/assets/default/img/message_avatar1.png}" /></a>
+                  <div class="message_wrap"> <span class="arrow"></span>
+                    <div class="info"> <a class="name"><font></font></a> <font><span class="time"><font>1小时前</font></span><a class="name"><font>约翰·史密斯</font></a></font><span class="time"><font></font></span>
+                      <div class="options_arrow">
+                        <div class="dropdown pull-right"> <a class="dropdown-toggle " id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="#"> <i class=" icon-caret-down"></i> </a>
+                          <ul class="dropdown-menu " role="menu" aria-labelledby="dLabel">
+                            <li><a href="#"><i class=" icon-share-alt icon-large"></i> Reply</a></li>
+                            <li><a href="#"><i class=" icon-trash icon-large"></i> Delete</a></li>
+                            <li><a href="#"><i class=" icon-share icon-large"></i> Share</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="text"><font><font>作为一个有趣的附注，作为一个没有身体的头，我羡慕死者。</font><font>有一种方法，只有一种方法来确定动物是否智能。</font><font>解剖大脑！</font><font>男人，我全身疼痛。</font><font>我觉得我刚刚和强大的雷神进行了十回合。</font></font></div>
+                  </div>
+                </li>
+                <li class="by_myself right"> <a href="#" class="avatar"><img th:src="@{/assets/default/img/message_avatar2.png}" /></a>
+                  <div class="message_wrap"> <span class="arrow"></span>
+                    <div class="info"> <a class="name"><font><font>Bender（我）</font></font></a> <span class="time"><font><font>4小时前</font></font></span>
+                      <div class="options_arrow">
+                        <div class="dropdown pull-right"> <a class="dropdown-toggle " id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="#"> <i class=" icon-caret-down"></i> </a>
+                          <ul class="dropdown-menu " role="menu" aria-labelledby="dLabel">
+                            <li><a href="#"><i class=" icon-share-alt icon-large"></i> Reply</a></li>
+                            <li><a href="#"><i class=" icon-trash icon-large"></i> Delete</a></li>
+                            <li><a href="#"><i class=" icon-share icon-large"></i> Share</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="text"><font><font>我想要的是成为一个适度智慧的猴子，穿着西装，这就是为什么我要转移到商学院！</font><font>我有更多，但你继续前进。</font><font>男人，我全身疼痛。</font><font>我觉得我刚刚和强大的雷神进行了十回合。</font><font>文件未找到。</font></font></div>
+                  </div>
+                </li>
+                <li class="from_user left"> <a href="#" class="avatar"><img th:src="@{img/message_avatar1.png}" /></a>
+                  <div class="message_wrap"> <span class="arrow"></span>
+                    <div class="info"> <a class="name"><font><font>Celeste Holm </font></font></a> <span class="time"><font><font>1天前</font></font></span>
+                      <div class="options_arrow">
+                        <div class="dropdown pull-right"> <a class="dropdown-toggle " id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="#"> <i class=" icon-caret-down"></i> </a>
+                          <ul class="dropdown-menu " role="menu" aria-labelledby="dLabel">
+                            <li><a href="#"><i class=" icon-share-alt icon-large"></i> Reply</a></li>
+                            <li><a href="#"><i class=" icon-trash icon-large"></i> Delete</a></li>
+                            <li><a href="#"><i class=" icon-share icon-large"></i> Share</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="text"><font><font>我会再做一次 </font><font>也许第三次！</font><font>但是就是这样。</font><font>你疯了吗？</font><font>我不能吞咽。</font><font>我是他的朋友耶稣。</font><font>不，我是圣诞老人！</font><font>从现在开始，你们都被命名为Bender Jr.</font></font></div>
+                  </div>
+                </li>
+                <li class="from_user left"> <a href="#" class="avatar"><img th:src="@{/assets/default/img/message_avatar2.png}" /></a>
+                  <div class="message_wrap"> <span class="arrow"></span>
+                    <div class="info"> <a class="name"><font><font>Mark Jobs </font></font></a> <span class="time"><font><font>2天前</font></font></span>
+                      <div class="options_arrow">
+                        <div class="dropdown pull-right"> <a class="dropdown-toggle " id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="#"> <i class=" icon-caret-down"></i> </a>
+                          <ul class="dropdown-menu " role="menu" aria-labelledby="dLabel">
+                            <li><a href="#"><i class=" icon-share-alt icon-large"></i> Reply</a></li>
+                            <li><a href="#"><i class=" icon-trash icon-large"></i> Delete</a></li>
+                            <li><a href="#"><i class=" icon-share icon-large"></i> Share</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="text"><font><font>这是关于成为奴隶的唯一的事情。</font><font>现在，现在 </font><font>完全对称的暴力从未解决过任何事情。</font><font>呃，小狗是以机械方式吗？</font><font>作为一个有趣的附注，作为一个没有身体的头，我羡慕死者。</font></font></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- /widget-content --> 
+          </div>
+          <!-- /widget --> 
+        </div>
+        <!-- /span6 -->
+        <div class="span6">
+          <div class="widget">
+            <div class="widget-header"> <i class="icon-bookmark"></i>
+              <h3><font><font>重要快捷方式</font></font></h3>
+            </div>
+            <!-- /widget-header -->
+            <div class="widget-content">
+              <div class="shortcuts"> <a href="javascript:;" class="shortcut"><i class="shortcut-icon icon-list-alt"></i><span class="shortcut-label"><font><font>应用</font></font></span> </a><a href="javascript:;" class="shortcut"><i class="shortcut-icon icon-bookmark"></i><span class="shortcut-label"><font><font>书签</font></font></span> </a><a href="javascript:;" class="shortcut"><i class="shortcut-icon icon-signal"></i> <span class="shortcut-label"><font><font>报告</font></font></span> </a><a href="javascript:;" class="shortcut"> <i class="shortcut-icon icon-comment"></i><span class="shortcut-label"><font><font>注释</font></font></span> </a><a href="javascript:;" class="shortcut"><i class="shortcut-icon icon-user"></i><span class="shortcut-label"><font><font>用户</font></font></span> </a><a href="javascript:;" class="shortcut"><i class="shortcut-icon icon-file"></i><span class="shortcut-label"><font><font>笔记</font></font></span> </a><a href="javascript:;" class="shortcut"><i class="shortcut-icon icon-picture"></i> <span class="shortcut-label"><font><font>相片</font></font></span> </a><a href="javascript:;" class="shortcut"> <i class="shortcut-icon icon-tag"></i><span class="shortcut-label"><font><font>标签</font></font></span> </a> </div>
+              <!-- /shortcuts --> 
+            </div>
+            <!-- /widget-content --> 
+          </div>
+          <!-- /widget -->
+          <div class="widget">
+            <div class="widget-header"> <i class="icon-signal"></i>
+              <h3><font><font> 区域图示例</font></font></h3>
+            </div>
+            <!-- /widget-header -->
+            <div class="widget-content">
+              <canvas id="area-chart" class="chart-holder" height="250" width="538" style="width: 538px; height: 250px;"> </canvas>
+              <!-- /area-chart --> 
+            </div>
+            <!-- /widget-content --> 
+          </div>
+          <!-- /widget -->
+          <div class="widget widget-table action-table">
+            <div class="widget-header"> <i class="icon-th-list"></i>
+              <h3><font><font>表示例</font></font></h3>
+            </div>
+            <!-- /widget-header -->
+            <div class="widget-content">
+              <table class="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                    <th><font><font> 免费资源 </font></font></th>
+                    <th><font><font> 下载</font></font></th>
+                    <th class="td-actions"> </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><font><font> 新鲜的Web开发资源 </font></font></td>
+                    <td><font><font> http://www.cssmoban.com/ </font></font></td>
+                    <td class="td-actions"><a href="javascript:;" class="btn btn-small btn-success"><i class="btn-icon-only icon-ok"> </i></a><a href="javascript:;" class="btn btn-danger btn-small"><i class="btn-icon-only icon-remove"> </i></a></td>
+                  </tr>
+                  <tr>
+                    <td><font><font> 新鲜的Web开发资源 </font></font></td>
+                    <td><font><font> http://www.cssmoban.com/ </font></font></td>
+                    <td class="td-actions"><a href="javascript:;" class="btn btn-small btn-success"><i class="btn-icon-only icon-ok"> </i></a><a href="javascript:;" class="btn btn-danger btn-small"><i class="btn-icon-only icon-remove"> </i></a></td>
+                  </tr>
+                  <tr>
+                    <td><font><font> 新鲜的Web开发资源 </font></font></td>
+                    <td><font><font> http://www.cssmoban.com/ </font></font></td>
+                    <td class="td-actions"><a href="javascript:;" class="btn btn-small btn-success"><i class="btn-icon-only icon-ok"> </i></a><a href="javascript:;" class="btn btn-danger btn-small"><i class="btn-icon-only icon-remove"> </i></a></td>
+                  </tr>
+                  <tr>
+                    <td><font><font> 新鲜的Web开发资源 </font></font></td>
+                    <td><font><font> http://www.cssmoban.com/ </font></font></td>
+                    <td class="td-actions"><a href="javascript:;" class="btn btn-small btn-success"><i class="btn-icon-only icon-ok"> </i></a><a href="javascript:;" class="btn btn-danger btn-small"><i class="btn-icon-only icon-remove"> </i></a></td>
+                  </tr>
+                  <tr>
+                    <td><font><font> 新鲜的Web开发资源 </font></font></td>
+                    <td><font><font> http://www.cssmoban.com/ </font></font></td>
+                    <td class="td-actions"><a href="javascript:;" class="btn btn-small btn-success"><i class="btn-icon-only icon-ok"> </i></a><a href="javascript:;" class="btn btn-danger btn-small"><i class="btn-icon-only icon-remove"> </i></a></td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            </div>
+            <!-- /widget-content --> 
+          </div>
+        </div>
+        <!-- /span6 --> 
+      </div>
+      <!-- /row --> 
+    </div>
+    <!-- /container --> 
+  </div>
+  <!-- /main-inner --> 
+</div>
+<!-- /main -->
+
+
+<!--================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script th:src="@{/assets/default/js/jquery-1.7.2.min.js}"></script> 
+<script th:src="@{/assets/default/js/excanvas.min.js}"></script> 
+<script th:src="@{/assets/default/js/chart.min.js}" type="text/javascript"></script> 
+<script th:src="@{/assets/default/js/bootstrap.js}"></script>
+ 
+<script th:src="@{/assets/default/js/base.js}"></script> 
+
+<!--开始消息提示框 -->
+<script th:src="@{/assets/msg/mustache/mustache.js}" type="text/javascript"></script>
+<script th:src="@{/assets/msg/toastr/js/toastr.js}" type="text/javascript"></script>
+<script th:src="@{/assets/msg/Message.js}" type="text/javascript"></script>        
+<!--结束消息提示框 -->
+<!-- add -->
+<script th:src="@{/js/common/base.js}" type="text/javascript"></script>
+<script th:src="@{/js/system/index.js}"></script>
+
+<!-- listener -->
+<script th:src="@{/js/common/listener.js}"></script>
+</body>
+</html>
